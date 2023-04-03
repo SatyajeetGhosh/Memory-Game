@@ -7,4 +7,52 @@
 body{
     height: 100vh;
     background-image: radial-gradient( circle farthest-corner at -4.5% 34.3%,  rgba(13,20,174,1) 0%, rgba(243,165,140,1) 90% );
+    display: flex;
+}
+
+.memory-card-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-items: center;
+    align-items: center;
+    margin: auto;
+    perspective: 1000px;   /* It gives depth to our elements */
+}
+
+.memory-card-container .memory-card{
+    margin: 0.35em;
+    border-radius: 1em;
+    background-color: #576CBC;
+    cursor: pointer;
+    transform: scale(1);
+    position: relative;
+    height: 140px;
+    width: 140px;
+    transform-style: preserve-3d; /* Its gonna insert our memory-card element inside the 3D space we just created in memory-card-container */
+    transition: transform 0.5s;   /* To see 3D effect we need to add transition to the transform property */
+}
+
+.memory-card-container .memory-card:active{
+    transform: scale(.97);
+    transition: transform .2s;
+}
+
+.memory-card-container .memory-card img{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    backface-visibility: hidden;
+}
+
+.memory-card-container .memory-card .front-face{
+    transform: rotateY(180deg);
+}
+
+.memory-card-container .memory-card.flip{
+    transform: rotateY(180deg); /* To flip the card */
 }
