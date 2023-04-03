@@ -1,5 +1,5 @@
 <h1>Memory-Game</h1>
-<p>Built a Memory game using HTML, CSS and JavaScript.</p>
+<p>Built a Memory game using HTML, CSS and JavaScript. This game can be played with ease in devices of any screen size</p>
 
 <p><a href="https://satyajeetghosh.github.io/Memory-Game/" target="__blank">Click here</a> for a quick preview or go to https://satyajeetghosh.github.io/Memory-Game/</p>
 
